@@ -36,6 +36,7 @@ class Solution:
                 cnt += num >> i & 1
             if cnt % 3:
                 if i == 31:
+                #python是无符号位二进制，最高位数为1代表负数
                     ret -= (1 << i)
                 else:
                     ret |= 1 << i
